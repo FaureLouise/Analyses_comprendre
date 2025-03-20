@@ -269,7 +269,7 @@ def save_metric_to_excel(metric_df, path):
 
 
 for class_name, corr_matrix in correlations.items():
-    G = build_graph(corr_matrix, p_matrices, class_name, significance=SIGNIFICANCE_THRESHOLD)  # Passer class_name pour accéder à p_matrix correct
+    G = build_graph(corr_matrix, p_matrices, class_name, significance=SIGNIFICANCE_THRESHOLD)  
     if G.number_of_edges() > 0:
         metric = calculate_graph_metric(G)
         
